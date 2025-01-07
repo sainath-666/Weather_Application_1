@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    animation: fadeIn 1s ease-out;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: slideUp 1s ease-out;
+    margin-bottom: 50px; /* Add space for footer */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    width: 80%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#loadingMessage {
+    font-size: 1.2rem;
+    color: #007BFF;
+    font-weight: bold;
+    animation: fadeIn 2s ease-out;
+}
+
+#weatherResult {
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+#weatherResult img {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    transition: transform 0.5s ease;
+}
+
+#weatherResult img:hover {
+    transform: scale(1.2);
+}
+
+#cityName {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#temperature, #description, #humidity, #windSpeed {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    color: #555;
+    background-color: #f0f4f8;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
