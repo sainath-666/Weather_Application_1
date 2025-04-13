@@ -3,33 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather Forecast App | Sainathreddy</title>
+    <meta name="description" content="A modern weather forecast application that provides real-time weather information for any city around the world.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Weather App</h1>
+        <h1><i class="fas fa-cloud-sun"></i> Weather Forecast</h1>
         <div class="input-container">
-            <input type="text" id="cityInput" placeholder="Enter city name">
-            <button id="getWeather">Get Weather</button>
+            <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off">
+            <button id="getWeather"><i class="fas fa-search"></i> Get Weather</button>
         </div>
-        <p id="loadingMessage" class="hidden">Loading...</p>
-        <p id="errorMessage" class="hidden">City not found. Please try again.</p>
+        <p id="loadingMessage" class="hidden"><i class="fas fa-spinner fa-spin"></i> Fetching weather data...</p>
+        <p id="errorMessage" class="hidden"><i class="fas fa-exclamation-circle"></i> City not found. Please try again.</p>
         
         <div id="weatherResult" class="hidden">
             <h2 id="cityName"></h2>
-            <img id="weatherIcon" src="" alt="Weather Icon">
+            <div class="weather-icon-container">
+                <img id="weatherIcon" src="" alt="Weather Icon">
+            </div>
             <p id="temperature"></p>
-            <p id="description"></p>
-            <p id="humidity"></p>
-            <p id="windSpeed"></p>
+            <div class="weather-details">
+                <p id="description"></p>
+                <p id="humidity"><i class="fas fa-tint"></i> <span></span></p>
+                <p id="windSpeed"><i class="fas fa-wind"></i> <span></span></p>
+            </div>
         </div>
     </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>Designed by <a href="https://www.linkedin.com/in/sainath666" target="_blank">Sainathreddy</a> | 
-        <a href="https://github.com/sainath-666" target="_blank">GitHub</a></p>
+        <div class="footer-content">
+            <p>Designed with <i class="fas fa-heart"></i> by <a href="https://www.linkedin.com/in/sainath666" target="_blank" rel="noopener">Sainathreddy</a> | 
+            <a href="https://github.com/sainath-666" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
